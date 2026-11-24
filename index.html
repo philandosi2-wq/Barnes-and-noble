@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save Up to $500 at Barnes &amp; Noble</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+/* 1 unit = 1px of the 1080px-wide phone screenshot */
+:root{--u:calc(min(100vw,520px) / 1080);--green:#00663f;--gold:#b8962e;}
+html{-webkit-text-size-adjust:100%;}
+body{font-family:'Montserrat','Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#fff;color:#111;}
+.inner{width:min(100vw,520px);margin:0 auto;padding:0 calc(63*var(--u));}
+
+/* top banner */
+.banner{background:var(--green);border-bottom:calc(10*var(--u)) solid #111;height:calc(107*var(--u));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Roboto',Arial,sans-serif;font-weight:700;font-size:calc(31*var(--u));text-transform:uppercase;letter-spacing:calc(-.2*var(--u));text-align:center;padding:0 calc(20*var(--u));}
+
+/* wordmark */
+.wm{font-weight:500;letter-spacing:calc(9*var(--u));color:#3a3a3a;text-transform:uppercase;white-space:nowrap;}
+.wm i{font-style:normal;color:var(--gold);font-weight:400;letter-spacing:0;}
+.brandrow{display:flex;align-items:center;gap:calc(50*var(--u));margin-top:calc(110*var(--u));}
+.brandrow .ln{flex:1;height:calc(4*var(--u));background:#b4d1c6;}
+.brandrow .wm{font-size:calc(47*var(--u));}
+
+/* hero card */
+.hero{margin-top:calc(100*var(--u));background:#f0f4f1;border-radius:calc(22*var(--u)) calc(22*var(--u)) calc(14*var(--u)) calc(14*var(--u));border-bottom:calc(11*var(--u)) solid #111;text-align:center;padding:calc(28*var(--u)) calc(20*var(--u)) calc(38*var(--u));}
+.hero .a{font-size:calc(52*var(--u));font-weight:500;color:#111;}
+.hero .amt{font-size:calc(215*var(--u));font-weight:900;font-style:italic;color:#00663f;line-height:1.02;letter-spacing:calc(-6*var(--u));text-shadow:calc(7*var(--u)) calc(7*var(--u)) 0 #111;margin:calc(4*var(--u)) 0 calc(10*var(--u));}
+.hero .b{font-size:calc(62*var(--u));font-weight:700;color:#111;}
+
+.sub{text-align:center;font-size:calc(38*var(--u));font-weight:300;color:#5a5a5a;line-height:calc(68*var(--u));margin-top:calc(42*var(--u));}
+
+/* steps */
+.steps{margin-top:calc(112*var(--u));}
+.step{display:flex;gap:calc(43*var(--u));align-items:center;position:relative;min-height:calc(147*var(--u));}
+.step:last-child{min-height:calc(163*var(--u));}
+.step .c{width:calc(84*var(--u));height:calc(84*var(--u));min-width:calc(84*var(--u));border-radius:50%;background:#edf4f0;border:calc(3*var(--u)) solid #cfe0d7;color:var(--green);display:flex;align-items:center;justify-content:center;font-size:calc(34*var(--u));font-weight:700;position:relative;z-index:1;}
+.step:not(:last-child)::before{content:"";position:absolute;left:calc(40*var(--u));top:calc(50% + 42*var(--u));height:calc(100% - 84*var(--u));width:calc(6*var(--u));background:#d5d5d5;}
+.step p{font-size:calc(35*var(--u));font-weight:500;line-height:calc(60*var(--u));color:#111;}
+
+.online{display:flex;align-items:center;justify-content:center;gap:calc(22*var(--u));margin-top:calc(100*var(--u));font-size:calc(30*var(--u));font-weight:600;color:#0b6b45;}
+.online i{width:calc(20*var(--u));height:calc(20*var(--u));border-radius:50%;background:#0b6b45;display:block;}
+
+.cta{display:flex;align-items:center;justify-content:center;gap:calc(44*var(--u));margin-top:calc(60*var(--u));background:var(--green);color:#fff;text-decoration:none;border-radius:calc(26*var(--u));height:calc(168*var(--u));font-size:calc(51*var(--u));font-weight:800;text-transform:uppercase;letter-spacing:calc(1*var(--u));box-shadow:0 calc(20*var(--u)) calc(40*var(--u)) rgba(0,102,63,.22);-webkit-tap-highlight-color:transparent;}
+.cta svg{width:calc(46*var(--u));height:calc(46*var(--u));stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+.cta:active{transform:scale(.985);}
+
+.note{text-align:center;font-size:calc(30*var(--u));font-weight:500;color:#555;margin-top:calc(52*var(--u));}
+.tp{display:flex;align-items:center;justify-content:center;gap:calc(32*var(--u));margin-top:calc(96*var(--u));color:#555;font-size:calc(30*var(--u));}
+.tp b{display:flex;align-items:center;gap:calc(18*var(--u));font-size:calc(50*var(--u));font-weight:700;color:#111;font-family:'Roboto',Arial,sans-serif;}
+.tp svg{width:calc(56*var(--u));height:calc(56*var(--u));fill:#00a35c;}
+
+hr{border:none;border-top:calc(3*var(--u)) solid #e3e3e3;margin:calc(120*var(--u)) 0 calc(100*var(--u));}
+.faq-h{text-align:center;font-size:calc(59*var(--u));font-weight:500;color:#111;margin-bottom:calc(66*var(--u));}
+.fq{border:calc(3*var(--u)) solid #dedede;border-radius:calc(28*var(--u));margin-bottom:calc(32*var(--u));min-height:calc(185*var(--u));}
+.fq-q{display:flex;justify-content:space-between;align-items:flex-start;padding:calc(52*var(--u)) calc(52*var(--u)) calc(20*var(--u)) calc(55*var(--u));font-size:calc(35*var(--u));font-weight:500;cursor:pointer;user-select:none;}
+.plus{position:relative;width:calc(34*var(--u));height:calc(34*var(--u));margin-top:calc(6*var(--u));flex-shrink:0;}
+.plus::before,.plus::after{content:"";position:absolute;background:var(--green);border-radius:2px;transition:transform .25s;}
+.plus::before{left:0;right:0;top:50%;height:calc(4*var(--u));margin-top:calc(-2*var(--u));}
+.plus::after{top:0;bottom:0;left:50%;width:calc(4*var(--u));margin-left:calc(-2*var(--u));}
+.fq.open .plus::after{transform:scaleY(0);}
+.fq-a{max-height:0;overflow:hidden;padding:0 calc(55*var(--u));font-size:calc(34*var(--u));line-height:1.6;color:#666;font-family:'Roboto','Montserrat',Arial,sans-serif;transition:max-height .3s ease,padding .3s ease;}
+.fq.open .fq-a{max-height:300px;padding:0 calc(55*var(--u)) calc(40*var(--u));}
+
+/* footer */
+footer{background:#1b1b1b;margin-top:calc(150*var(--u));padding:calc(86*var(--u)) 0 calc(110*var(--u));text-align:center;}
+.flogo{display:inline-block;background:#fff;border-radius:calc(12*var(--u));padding:calc(24*var(--u)) calc(50*var(--u));}
+.flogo .wm{font-size:calc(34*var(--u));letter-spacing:calc(8*var(--u));}
+.flinks{display:flex;justify-content:center;gap:calc(52*var(--u));margin-top:calc(58*var(--u));}
+.flinks a{color:#fff;font-weight:600;font-size:calc(32*var(--u));text-decoration:none;font-family:'Roboto',Arial,sans-serif;}
+</style>
+</head>
+<body>
+
+<div class="banner">Limited-time offer: Save up to $500</div>
+
+<div class="inner">
+
+  <div class="brandrow"><span class="ln"></span><span class="wm">Barnes<i>&amp;</i>Noble</span><span class="ln"></span></div>
+
+  <div class="hero">
+    <div class="a">Save Up to</div>
+    <div class="amt">$500</div>
+    <div class="b">at Barnes &amp; Noble</div>
+  </div>
+
+  <p class="sub">Claim your reward and stock up on the bestsellers, classics and new releases you love.</p>
+
+  <div class="steps">
+    <div class="step"><div class="c">1</div><p>Click “Claim Now” to get started</p></div>
+    <div class="step"><div class="c">2</div><p>Enter your email and basic information</p></div>
+    <div class="step"><div class="c">3</div><p>Complete 5–6 recommended deals</p></div>
+    <div class="step"><div class="c">4</div><p>Claim your reward after completing the required deals</p></div>
+  </div>
+
+  <div class="online"><i></i><span><span id="online">172</span> Barnes &amp; Noble shoppers online</span></div>
+
+  <a class="cta" href="https://giftclick.org/aff_c?offer_id=4347&aff_id=170353" target="_blank" rel="noopener">Claim Now
+    <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+  </a>
+
+  <div class="note">Limited-time savings. Don't miss out.</div>
+
+  <div class="tp"><span>Read reviews on</span><b><svg viewBox="0 0 24 24"><path d="M12 1.5l3.1 7.3 7.9.7-6 5.2 1.8 7.8L12 18.2 5.2 22.5 7 14.7 1 9.5l7.9-.7z"/></svg>Trustpilot</b></div>
+
+  <hr>
+
+  <div class="faq-h">Frequently Asked Questions</div>
+
+  <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>How does the offer work?</span><span class="plus"></span></div>
+    <div class="fq-a">Click “Claim Now”, enter your email and basic information, then complete 5–6 recommended deals. Once the required deals are completed and verified, your reward is released.</div></div>
+  <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>How long is the offer valid?</span><span class="plus"></span></div>
+    <div class="fq-a">This is a limited-time offer and may end at any time, so it's best to claim yours today while it's available.</div></div>
+  <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>Who can participate?</span><span class="plus"></span></div>
+    <div class="fq-a">The offer is open to eligible participants. Review the terms shown on the next page before participating.</div></div>
+
+</div>
+
+<footer>
+  <div class="flogo"><span class="wm">Barnes<i>&amp;</i>Noble</span></div>
+  <div class="flinks"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Legal Notice</a></div>
+</footer>
+
+<script>
+let n = 172;
+setInterval(function(){
+  n += Math.floor(Math.random()*9) - 4;
+  if(n < 140) n = 140; if(n > 195) n = 195;
+  document.getElementById('online').textContent = n;
+}, 5000);
+</script>
+</body>
+</html>
